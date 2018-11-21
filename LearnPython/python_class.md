@@ -82,7 +82,7 @@ Mie-Ken Tsu-shiMie-Ken Tsu-shiMie-Ken Tsu-shi
 ```  
 
 
-- クラスの属性は、
+### クラスの属性
 
 - インスタンス属性と、クラス属性は、別々に定義できる。例えば　　
 ```
@@ -91,4 +91,33 @@ class MixedNames:　　
   def __init__(self, value):　　
     self.data = value ##これは、x.dataでよびだせる、インスタンス属性　　
 ```
+
+- __init__は、「**コントラくタ**」とよばれる特殊なメソッド。これは、最初に__init__が見つかった時点で、呼び出しが終わる。なので、スーパークラスのコンストラクタを呼び出すことは基本的にはできない。スーパークラスのコンストラクタを呼び出すには、
+```
+class Sub(Super):
+  def __init__(self, x, y):
+    Super.__init__(self, x)
+    ...
+```
+のようにする。
+
+
+### 継承したクラスのカスタマイズ  
+pass -> returnがなくても、とりあえず実行したい時  
+
+### 演算子のオーバーロード用のメソッドの定義  
+```
+class Number():
+  def __init__(self, start):
+    self.data = start
+  def __sub__(self, other): #hook methodと呼ばれることもある。
+    return Number(self.data - other)
+    ...
+```
+
+#メモ  
+dir(object) == object.__dict__.keys()  
+これらは同等
+
+
 
