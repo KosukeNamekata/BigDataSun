@@ -58,7 +58,25 @@ class spam: #food.spam
 - 名前の前後に２つの下線のついたメソッドは、インスタンスオブジェクトが対応する演算に使われた時に、自動的に呼び出される。  
 - クラスでは、ビルドインオブジェクトに使用される演算子のほとんど全てをオーバーロードできる。  
 
+```  
+class MyData:
+    def __int__(self):
+        #self.birthday = 20190101　##ここがモジュールでないので、こう書いても呼ばれない。したの一文も然り。
+        print('コンストラクタが呼ばれました')
+        
+    def WriteMyName(self, name):
+        self.MyName = name
+        
+a = MyData()
+a.WriteMyName("Kosuke")
+print("My name is", a.MyName)
+print(dir(a))
 
-
-
-
+a.HomeTown = "Mie-Ken" #属性を、外でも作れる。
+a.HomeTown+=" Tsu-shi"  #演算子のオーバーロード
+a.HomeTown = a.HomeTown * 3 #このように、あらゆる演算を、行うことができる。超便利かよ。
+print(a.HomeTown)
+```  
+```  
+Mie-Ken Tsu-shiMie-Ken Tsu-shiMie-Ken Tsu-shi
+```  
