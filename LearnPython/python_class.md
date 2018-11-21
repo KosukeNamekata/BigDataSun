@@ -83,3 +83,12 @@ Mie-Ken Tsu-shiMie-Ken Tsu-shiMie-Ken Tsu-shi
 
 
 - クラスの属性は、
+
+- インスタンス属性と、クラス属性は、別々に定義できる。例えば　　
+```
+class MixedNames:　　
+  data = "smap"　##これは、MixedNames.dataでよびだせる、クラス属性　　
+  def __init__(self, value):　　
+    self.data = value ##これは、x.dataでよびだせる、インスタンス属性　　
+```
+
