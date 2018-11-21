@@ -80,3 +80,6 @@ print(a.HomeTown)
 ```  
 Mie-Ken Tsu-shiMie-Ken Tsu-shiMie-Ken Tsu-shi
 ```  
+
+
+- クラスの属性は、
