@@ -1,33 +1,29 @@
 
 ## 便利なpythonのコードをまとめていく
 
-## ある変数の正体を調べたいとき： print, type, dir
+### ＊pythonは、全てがオブジェクト指向プログラム  
+- pythonの変数、リストなどは、全てクラスによって定義された「**インスタンス**」と同じような機能を持ち、**多くのメソッドが用意されている**。
 
-print関数を使って、変数の値を調べることができます。
-また、type(x)は、xの型を返す関数です。たとえば、次のプログラムを実行すると
+
+### ＊ある変数の正体を調べたいとき： type, dir
+
+- type(x): xの型を返す関数です。たとえば、次のプログラムを実行すると
 
 ```
 x=4.2
 print(type(x))
 ```
-
-次のような出力が帰ってきます。このことから、変数ｘの値は4.2で、その型は’float’であることがわかります。（floatは、pythonで実数を表現するのに通常つかわれる型です。）
-
 ```
-4.2
 <type 'float'>
 ```
 
-さらに、dir(x)は、xの持っているメソッドを全て表示してくれます。
+- dir(x): xの持っているメソッドを全て表示してくれます。
 
 ```
 x="deep learning"
-print(type(x))
 print(dir(x))
 ```
-
 ```
-<type 'str'>
 ['__add__', '__class__', '__contains__', ... , 'zfill']
 ```
 
@@ -41,9 +37,6 @@ print(x.split(" "))
 print(x.replace("e","o"))
 print(x.replace("e","n").split("n"))
 ```
-
-は、次のような結果になります。
-
 ```
 Deep learning
 ['deep', 'learning']
@@ -51,7 +44,7 @@ doop loarning
 ['d', '', 'p l', 'ar', 'i', 'g']
 ```
 
-## appendとextendの違い...
+### ＊リストへの操作：appendとextendの違い...
 ・appendは、　　
 
 ・extendは、
